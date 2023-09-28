@@ -1,8 +1,26 @@
 package css.pizzaorder;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+
+@Entity
 public class Pizza {
+    @Ignore
     final Double[] PIZZA_PRICES = {7.99, 9.99, 12.99, 14.99};
     final String[] PIZZA_SIZES = {"Small","Medium","Large","X-Large"};
+
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "word")
+    private String mPizza;
+
+    public Pizza(@NonNull String pizza) {this.mPizza = pizza;}
+
+    public String getPizza(){return this.mPizza;}
 
     private String topping;
     private Double price;

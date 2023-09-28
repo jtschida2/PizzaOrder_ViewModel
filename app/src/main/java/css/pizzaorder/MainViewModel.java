@@ -10,6 +10,7 @@ import java.util.List;
 public class MainViewModel extends ViewModel {
 
     PizzaOrder pizzaOrder = new PizzaOrder();
+    //PizzaRepository pizzaRepository = new PizzaRepository();
 
     // For live data updates from https://developer.android.com/topic/libraries/architecture/livedata
     private MutableLiveData<String> orderStatus;
